@@ -322,7 +322,8 @@ const data = [
     });
 
     const sortRows = function(index) {
-      const newRows = Array.from(allRow);
+      const rows = document.querySelectorAll('.contact');
+      const newRows = Array.from(rows);
       newRows.sort((rowA, rowB) => {
         const cellA = rowA.querySelectorAll('td')[index].textContent;
         const cellB = rowB.querySelectorAll('td')[index].textContent;
@@ -337,7 +338,7 @@ const data = [
         }
       });
 
-      [].forEach.call(allRow, (row) => {
+      [].forEach.call(rows, (row) => {
         list.removeChild(row);
       });
 
@@ -346,13 +347,12 @@ const data = [
       });
     };
 
-    const headers = document.querySelectorAll('th');
-
-    headers.forEach((header, index) => {
+    document.querySelectorAll('th').forEach((header, index) => {
       if (index === 1 || index === 2) {
         header.addEventListener('click', () => {
           sortRows(index);
         });
+        header.style.cursor = 'pointer';
       }
     });
   };
