@@ -338,9 +338,9 @@ const data = [
         }
       });
 
-      [].forEach.call(rows, (row) => {
-        list.removeChild(row);
-      });
+      // [].forEach.call(rows, (row) => {
+      //   list.removeChild(row);
+      // });
 
       newRows.forEach((newRow) => {
         list.appendChild(newRow);
