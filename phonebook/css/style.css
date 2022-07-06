@@ -16,6 +16,10 @@ body {
   text-transform: uppercase;
 }
 
+.table {
+  margin-bottom: 70px;
+}
+
 @media (max-width: 720px) {
   .logo {
     font-size: 20px;
@@ -58,8 +62,6 @@ body {
 .btn-wrapper {
   margin-bottom: 30px;
 }
-
-
 
 .form {
   padding: 30px 50px;
