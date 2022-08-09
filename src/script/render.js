@@ -1,7 +1,7 @@
-
-import createElements from './createElements.js';
+import createElements from './createElements';
 
 const {
+  createImageLogo,
   createHeader,
   createLogo,
   createCopyright,
@@ -15,12 +15,13 @@ const {
 
 const renderPhoneBook = (app, title) => {
   const header = createHeader();
+  const imageLogo = createImageLogo();
   const logo = createLogo(title);
   const copyright = createCopyright(title);
   const main = createMain();
   const buttonGroup = createButtonGroup([
     {
-      className: "btn btn-primary mr-3",
+      className: "btn btn-primary me-3 mr-3",
       type: "button",
       text: "Добавить",
     },
@@ -34,7 +35,7 @@ const renderPhoneBook = (app, title) => {
   const {form, overlay} = createForm();
   const footer = createFooter();
 
-  header.headerContainer.append(logo);
+  header.headerContainer.append(imageLogo, logo);
   footer.footerContainer.append(copyright);
   main.mainContainer.append(buttonGroup.btnWrapper, table, overlay);
   app.append(header, main, footer);

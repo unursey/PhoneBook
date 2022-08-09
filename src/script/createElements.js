@@ -1,3 +1,10 @@
+import image from '../img/icon.svg';
+
+const createImageLogo = () => {
+  const img = document.createElement('img');
+  img.src = image;
+  return img;
+};
 
 const createContainer = () => {
   const container = document.createElement("div");
@@ -97,7 +104,7 @@ const createForm = () => {
   form.insertAdjacentHTML(
     "beforeend",
     `
-        <button class="close" type="button"></button>
+        <button class="close border-0 bg-transparent" type="button"></button>
         <h2 class="form-title">Добавить контакт</h2>
         <div class="form-group">
             <label class="form-label" for="name">Имя: </label>
@@ -118,14 +125,14 @@ const createForm = () => {
   );
   const buttonGroup = createButtonGroup([
     {
-      className: "btn btn-primary mr-3",
+      className: "btn btn-primary me-3 mt-4 mr-3",
       type: "submit",
       text: "Добавить",
     },
     {
-      className: "btn btn-danger",
+      className: "btn btn-danger mt-4",
       type: "reset",
-      text: "Отмена",
+      text: "Очистить",
     },
   ]);
 
@@ -186,6 +193,7 @@ const createRow = ({name: firstName, surname, phone}) => {
 };
 
 export default {
+  createImageLogo,
   createHeader,
   createLogo,
   createCopyright,

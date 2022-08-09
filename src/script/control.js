@@ -1,10 +1,10 @@
 
-import createElements from './createElements.js';
+import createElements from './createElements';
 
 import {
   addContactData,
   removeStorageContactData,
-} from './serviceStorage.js';
+} from './serviceStorage';
 
 const {createRow} = createElements;
 
