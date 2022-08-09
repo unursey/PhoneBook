@@ -73,7 +73,6 @@ export const formControl = (form, list, closeModal) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const newContact = Object.fromEntries(formData);
-
     addContactPage(newContact, list);
     addContactData(newContact);
     form.reset();
